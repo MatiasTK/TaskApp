@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 import { Home } from "./Components/Home";
 import Register from "./Components/Register";
 import Login from "./Components/Login";
@@ -20,6 +20,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/RecoverPassword" element={<RecoverPassword />} />
+          <Route path="/TaskApp" element={<Navigate to="/" replace />}></Route>
         </Routes>
       </AuthProvider>
     </div>
